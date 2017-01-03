@@ -8,6 +8,9 @@
 </head>
 <body>
 
+	<style type="text/css">
+		body, html,#allmap {width: 80%;height: 80%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
 <!-- Header -->
 <header id="header">
 	<a href="index.html" class="logo"><strong>Ouwen</strong></a>
@@ -39,7 +42,7 @@
 		<p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suscipit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel. Nunc ullamcorper ipsum at diam congue luctus. Sed nec sapien blandit, tempor quam non, consectetur turpis. Morbi libero lorem, hendrerit sed metus non, malesuada placerat nulla. Sed nisi turpis, rutrum eget rutrum euismod, consequat ullamcorper eros. Quisque tortor nunc, sodales convallis nisl non, bibendum tincidunt tortor. Etiam pellentesque tincidunt nunc, a dignissim dolor tempus et. Pellentesque in urna ligula. Fusce ligula velit, mollis ac diam non, rutrum fringilla turpis.</p>
 	</div>
 </section>
-
+<div id="allmap"></div>
 <!-- Footer -->
 <footer id="footer">
 	<ul class="icons">
@@ -56,6 +59,7 @@
 <script src="assets/js/skel.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ETAnwiaTfBTvBb3u5GfC5fWY1opf0EYX"></script>
 <script type="text/javascript">
 	var R=0; x1=.1; y1=.05; x2=.25; y2=.24; x3=1.6; y3=.24; x4=300; y4=200; x5=300; y5=1000; 
 	var DI= document.getElementById("fly"); 
@@ -70,6 +74,21 @@
 	clearInterval(tag);
 	DI.style.position="static";
 	}; 
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	var point = new BMap.Point(113.579972,23.282971);
+	map.centerAndZoom(point, 16);
+  var point1 = new BMap.Point(113.581948,23.287651);
+	var marker = new BMap.Marker(point1);  // 创建标注
+  var point2 = new BMap.Point(113.582236,23.277527);
+  var marker1 = new BMap.Marker(point2);  // 创建标注
+	map.addOverlay(marker);              // 将标注添加到地图中
+  map.addOverlay(marker1);              // 将标注添加到地图中
+    
+	var label = new BMap.Label("我的小学",{offset:new BMap.Size(20,-10)});
+  var label1 = new BMap.Label("我的中学",{offset:new BMap.Size(20,-10)});
+	marker.setLabel(label);
+  marker1.setLabel(label1);
 </script>
 </body>
 </html>
