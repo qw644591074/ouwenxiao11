@@ -14,7 +14,7 @@
 window.onload=function(){
 	var chars = ["","12","14","15"];
     	var word="你真帅";
-	var id = Math.ceil(Math.random()*2);
+	var id = Math.ceil(Math.random()*3);
 	word=chars[id];
 	document.getElementById("word").innerHTML=word;
 	document.getElementById("btn").setAttribute("data-clipboard-text",word);
