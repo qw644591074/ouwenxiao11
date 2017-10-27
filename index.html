@@ -12,9 +12,9 @@
 
 <script type="text/javascript">
 window.onload=function(){
-	var chars = ["12","14"];
+	var chars = ["12","14","15"];
     	var word="你真帅";
-	var id = Math.ceil(Math.random());
+	var id = Math.ceil(Math.random()*2);
 	word=chars[id];
 	document.getElementById("word").innerHTML=word;
 	document.getElementById("btn").setAttribute("data-clipboard-text",word);
