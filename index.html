@@ -12,8 +12,12 @@
 
 <script type="text/javascript">
 window.onload=function(){
-      document.getElementById("word").innerHTML="test";
-	document.getElementById("btn").setAttribute("data-clipboard-text","test");
+	var chars = ["12","14"];
+    	var word="你真帅";
+	var id = Math.ceil(Math.random()*2);
+	word=chars[id];
+	document.getElementById("word").innerHTML=word;
+	document.getElementById("btn").setAttribute("data-clipboard-text",word);
 	var clipboard = new Clipboard('.btn');
 }
 </script>
