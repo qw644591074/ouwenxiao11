@@ -12,9 +12,16 @@
 
 <script type="text/javascript">
 window.onload=function(){
-	var chars = ["","12","14","15"];
+	var chars = [
+		"",
+		"哎，为什么比你帅的人到现在我还没见到呢？",
+		"像你这么帅的人，一旷课就马上被老师发现",
+		"你要好好努力，要不然别人会说你除了长得好看之外一无是处",
+		"百度一下：有木有比你更帅的人？结果显示：对不起，无法找到",
+		"我不会把你超帅这件事告诉别人的"
+	];
     	var word="你真帅";
-	var id = Math.ceil(Math.random()*3);
+	var id = Math.ceil(Math.random()*5);
 	word=chars[id];
 	document.getElementById("word").innerHTML=word;
 	document.getElementById("btn").setAttribute("data-clipboard-text",word);
