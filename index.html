@@ -10,18 +10,15 @@
       $("#btn1").click(function(){
           var max = 999;
       var min = 1;
-      var res = ((parseInt(Math.random() * 100)+1)%10)-1;
+      var res = ((parseInt(Math.random() * 100)+1)%6)-1;
       var a=new Array(10);
-       a[0]="hahah";
-       a[1]="mmmm";
-       a[2]="zxcvzxcv";
-        a[3]="zxcvzxcv3";
-        a[4]="zxcvzxcv4";
-        a[5]="zxcvzxcv5";
-        a[6]="zxcvzxcv6";
-        a[7]="zxcvzxcv7";
-        a[8]="zxcvzxcv8";
-        a[9]="zxcvzxcv9";
+       a[0]="你的容颜应该申请吉尼斯纪录。";
+       a[1]="我觉得世界上所有的褒义词都适合你。";
+       a[2]="我真的是服了你这个沉鱼落雁的仙女。";
+        a[3]="你再不回去迪士尼就要没公主了。";
+        a[4]="她那双圆溜溜的大眼睛,一眨一眨的,透出一股伶俐。";
+        a[5]="瀑布一般的长发，淡雅的连衣裙，标准的瓜子脸，聪明的杏仁眼，那稳重端庄的气质，再调皮的人见了你都会小心翼翼。";
+
           $("#text").html(a[res])
       });
       
