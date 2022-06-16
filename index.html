@@ -6,7 +6,9 @@
     <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
     <script>
     $(document).ready(function(){
-      var max = 999;
+      
+      $("#btn1").click(function(){
+          var max = 999;
       var min = 1;
       var res = ((parseInt(Math.random() * 100)+1)%10)-1;
       var a=new Array(10);
@@ -20,7 +22,6 @@
         a[7]="zxcvzxcv7";
         a[8]="zxcvzxcv8";
         a[9]="zxcvzxcv9";
-      $("#btn1").click(function(){
           $("#text").html(a[res])
       });
       
